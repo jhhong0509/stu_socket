@@ -1,14 +1,15 @@
-package com.example.stusocket.dto;
+package com.example.stusocket.payload.request;
 
+import com.example.stusocket.entity.chatroom.ChatRoom;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ChatMessage {
+public class ChatMessageRequest {
     public enum MessageType {
-        ENTER,
+        JOIN,
         TALK
     }
     private MessageType messageType;
@@ -18,4 +19,6 @@ public class ChatMessage {
     private String sender;
 
     private String message;
+
+
 }
